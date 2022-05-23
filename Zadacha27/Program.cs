@@ -9,21 +9,21 @@
 */
 
 Console.Write("Введите число N: ");
-int numberN = Convert.ToInt32(Console.ReadLine());
+int N = Convert.ToInt32(Console.ReadLine());
 
-  int SumNumber(int numberN){
+  int Sum(int N){
     
-    int counter = Convert.ToString(numberN).Length;
+    int counter = Convert.ToString(N).Length;
     int advance = 0;
     int result = 0;
 
     for (int i = 0; i < counter; i++){
-      advance = numberN - numberN % 10;
-      result = result + (numberN - advance);
-      numberN = numberN / 10;
+      advance = N - N % 10;
+      result = result + (N - advance);
+      N = N / 10;
     }
    return result;
   }
 
-int sumNumber = SumNumber(numberN);
-Console.WriteLine("Сумма цифр в числе: " + sumNumber);
+int sum = Sum(N);
+Console.WriteLine("Сумма цифр в числе: " + sum);
